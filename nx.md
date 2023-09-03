@@ -18,3 +18,19 @@ nx g storybook-configuration shared-wd-ui
 
 npx nx g @nx/angular:lib my-lib --buildable --add-tailwind
 ```
+
+## Create Library
+```
+npx nx g @nx/angular:lib wd-ui --publishable --importPath=@wd-ui --add-tailwind
+
+// For Existing application
+npx nx g @nx/angular:setup-tailwind my-project
+
+nx g @nx/angular:component components/button --project=wd-ui --standalone
+
+
+
+
+nx g @nx/angular:lib wd-shared --importPath=@wd-shared --prefix=wd
+nx g @nx/angular:component components/button --project=wd-ui --standalone
+```
